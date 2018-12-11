@@ -1,0 +1,30 @@
+11:40:31,051  INFO localhost-startStop-1 ContextLoader:305 - Root WebApplicationContext: initialization started
+11:40:31,101  INFO localhost-startStop-1 XmlWebApplicationContext:578 - Refreshing Root WebApplicationContext: startup date [Tue Dec 11 11:40:31 MYT 2018]; root of context hierarchy
+11:40:31,125  INFO localhost-startStop-1 XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/shell-service.xml]
+11:40:31,340  INFO localhost-startStop-1 ContextLoader:345 - Root WebApplicationContext: initialization completed in 288 ms
+11:40:31,345  INFO localhost-startStop-1 DispatcherServlet:487 - FrameworkServlet 'shell': initialization started
+11:40:31,347  INFO localhost-startStop-1 XmlWebApplicationContext:578 - Refreshing WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:40:31 MYT 2018]; parent: Root WebApplicationContext
+11:40:31,348  INFO localhost-startStop-1 XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/shell-servlet.xml]
+11:40:31,558  INFO localhost-startStop-1 RequestMappingHandlerMapping:534 - Mapped "{[/api/anon/getSuccess]}" onto public org.shell.rest.ResultJson org.shell.rest.RestTestController.getSuccess()
+11:40:31,560  INFO localhost-startStop-1 RequestMappingHandlerMapping:534 - Mapped "{[/test/requestSuccess],methods=[GET]}" onto public java.lang.String org.shell.web.TestController.requestSuccess()
+11:40:31,762  INFO localhost-startStop-1 RequestMappingHandlerAdapter:539 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:40:31 MYT 2018]; parent: Root WebApplicationContext
+11:40:31,790  INFO localhost-startStop-1 RequestMappingHandlerAdapter:539 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:40:31 MYT 2018]; parent: Root WebApplicationContext
+11:40:31,844  INFO localhost-startStop-1 DispatcherServlet:506 - FrameworkServlet 'shell': initialization completed in 499 ms
+11:41:16,700  INFO http-bio-8080-exec-3 TestController:17 - Received request to test
+11:44:34,739  INFO localhost-startStop-2 XmlWebApplicationContext:960 - Closing WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:40:31 MYT 2018]; parent: Root WebApplicationContext
+11:44:34,749  INFO localhost-startStop-2 XmlWebApplicationContext:960 - Closing Root WebApplicationContext: startup date [Tue Dec 11 11:40:31 MYT 2018]; root of context hierarchy
+11:44:46,226  INFO localhost-startStop-1 ContextLoader:305 - Root WebApplicationContext: initialization started
+11:44:46,293  INFO localhost-startStop-1 XmlWebApplicationContext:578 - Refreshing Root WebApplicationContext: startup date [Tue Dec 11 11:44:46 MYT 2018]; root of context hierarchy
+11:44:46,322  INFO localhost-startStop-1 XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/shell-service.xml]
+11:44:46,576  INFO localhost-startStop-1 ContextLoader:345 - Root WebApplicationContext: initialization completed in 349 ms
+11:44:46,587  INFO localhost-startStop-1 DispatcherServlet:487 - FrameworkServlet 'shell': initialization started
+11:44:46,590  INFO localhost-startStop-1 XmlWebApplicationContext:578 - Refreshing WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:44:46 MYT 2018]; parent: Root WebApplicationContext
+11:44:46,590  INFO localhost-startStop-1 XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/shell-servlet.xml]
+11:44:46,812  INFO localhost-startStop-1 RequestMappingHandlerMapping:534 - Mapped "{[/api/anon/getSuccess]}" onto public org.shell.rest.ResultJson org.shell.rest.RestTestController.getSuccess()
+11:44:46,813  INFO localhost-startStop-1 RequestMappingHandlerMapping:534 - Mapped "{[/test/requestSuccess],methods=[GET]}" onto public java.lang.String org.shell.web.TestController.requestSuccess()
+11:44:47,015  INFO localhost-startStop-1 RequestMappingHandlerAdapter:539 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:44:46 MYT 2018]; parent: Root WebApplicationContext
+11:44:47,049  INFO localhost-startStop-1 RequestMappingHandlerAdapter:539 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:44:46 MYT 2018]; parent: Root WebApplicationContext
+11:44:47,115  INFO localhost-startStop-1 DispatcherServlet:506 - FrameworkServlet 'shell': initialization completed in 528 ms
+11:45:02,238  WARN http-bio-8080-exec-3 PageNotFound:1139 - No mapping found for HTTP request with URI [/shell/web/anon/getSuccess] in DispatcherServlet with name 'shell'
+11:46:31,467  INFO localhost-startStop-2 XmlWebApplicationContext:960 - Closing WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:44:46 MYT 2018]; parent: Root WebApplicationContext
+11:46:31,473  INFO localhost-startStop-2 XmlWebApplicationContext:960 - Closing Root WebApplicationContext: startup date [Tue Dec 11 11:44:46 MYT 2018]; root of context hierarchy
