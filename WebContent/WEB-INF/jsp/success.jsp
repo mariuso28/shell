@@ -32,7 +32,7 @@ function getSuccess() {
 	  //  jdata = JSON.parse(data)
             
      	    var resultJson = $.parseJSON(JSON.stringify(data));
-            alert(resultJson.result);
+          alert(resultJson.result);
 
         }
      });

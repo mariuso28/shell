@@ -12,8 +12,14 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 		<context:annotation-config />
-
-		<import resource="shell-persistence.xml"/>
+		<bean class="org.shell.config.SecurityConfiguration" />
+		<bean class="org.shell.config.OAuth2AuthorizationServerConfig" />
+		<bean class="org.shell.config.OAuth2ResourceServerConfig" />
+		<bean class="org.shell.config.service.CustomUserDetailsService" />
+		<bean class="org.shell.config.service.CustomAuthenticationSuccessHandler" />
+		<bean class="org.shell.config.service.CustomAuthenticationFailureHandler" />
+		
+	<import resource="shell-persistence.xml"/>
 		
 		<bean id="services"
 			class="org.shell.services.Services" >		

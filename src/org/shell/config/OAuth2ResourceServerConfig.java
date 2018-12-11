@@ -15,12 +15,18 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
 			.antMatcher("/api/**")
 			.authorizeRequests()
 			.antMatchers(
-					"/api/anon/**",
-					"/api/a/**"
+					"/api/a/**",
+					"/api/anon/**"
 					)
 			.permitAll()			
-			.anyRequest()
-			.access("hasAnyRole('ROLE_TRADER,ROLE_ADMIN')")
+			.antMatchers(
+					"/api/punter/**"
+					)
+			.access("hasAnyRole('ROLE_PUNTER')")
+			.antMatchers(
+					"/api/admin/**"
+					)
+			.access("hasAnyRole('ROLE_ADMIN')")
 		
 		;
     }

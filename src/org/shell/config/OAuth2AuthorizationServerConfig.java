@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import javax.sql.DataSource;
 
-import org.cz.config.service.CustomUserDetailsService;
+import org.shell.config.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;

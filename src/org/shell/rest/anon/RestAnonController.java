@@ -1,4 +1,4 @@
-package org.shell.rest;
+package org.shell.rest.anon;
 
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;

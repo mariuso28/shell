@@ -47,7 +47,7 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 	public BaseUser getByEmail(final String email) throws PersistenceRuntimeException {
 		try
 		{
-			final String sql = "SELECT * FROM baseUser WHERE email=?";
+			final String sql = "SELECT * FROM baseuser WHERE email=?";
 			List<BaseUser> bus = getJdbcTemplate().query(sql,new PreparedStatementSetter() {
 				        public void setValues(PreparedStatement preparedStatement) throws SQLException {
 				          preparedStatement.setString(1, email);

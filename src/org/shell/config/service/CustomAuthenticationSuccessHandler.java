@@ -33,21 +33,12 @@ public class CustomAuthenticationSuccessHandler extends SavedRequestAwareAuthent
 		
 		String authorities = user.getAuthorities().toString();
 		if ( authorities.contains("ROLE_ADMIN"))
-			setDefaultTargetUrl("/Dx4/adm/goAdminHome");
+			setDefaultTargetUrl("/web/admin/goAdminHome");
 		else
-		if (authorities.contains("ROLE_COMP") || authorities.contains("ROLE_ZMA") 
-				|| authorities.contains("ROLE_SMA") || authorities.contains("ROLE_MA") 
-				|| authorities.contains("ROLE_AGENT"))
-		{
-			setDefaultTargetUrl("/Dx4/agnt/goAgent");
-		}
+		if ( authorities.contains("ROLE_PUNTER"))
+			setDefaultTargetUrl("/web/punter/goPunterHome");
 		else
-		if (authorities.contains("ROLE_PLAY"))
-		{
-			setDefaultTargetUrl("/Dx4/play/goPlayer");	
-		}
-		else
-			setDefaultTargetUrl("/DX4/logon/signin?error&message=" + "Unknown role fo : ".replace(" ","%20") + user.getUsername());
+			setDefaultTargetUrl("/web/anon//signin?error&message=" + "Unknown role fo : ".replace(" ","%20") + user.getUsername());
 		
 		setAlwaysUseDefaultTargetUrl(true);
 		request.getSession().setMaxInactiveInterval(5*60);

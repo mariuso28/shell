@@ -38,7 +38,7 @@ public class CreateSampleUsers
 	{
 		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext(
-				"plate-service.xml");
+				"shell-service.xml");
 
 		Home home = (Home) context.getBean("home");
 		BaseUser admin = createAdmin();
@@ -57,7 +57,7 @@ public class CreateSampleUsers
 		log.info("Admin : " + admin);
 		
 		punter = home.getBaseUserDao().getByEmail("punter@test.com");
-		log.info("Punter : " + admin);
+		log.info("Punter : " + punter);
 		
 		log.info("Done");
 	}

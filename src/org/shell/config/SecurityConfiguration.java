@@ -80,7 +80,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http
 		.authorizeRequests()
 		.antMatchers(
-				"/logon/**",
+				"/web/anon/**",
 				"/css/**/**",
 				"/fonts/**",
 				"/images/**",
@@ -90,14 +90,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		.permitAll()
 		
 		.antMatchers(
-				"/api/adm/**"
+				"/web/admin/**"
 				)
 		
 		.access("hasRole('ROLE_ADMIN')")
-			
+		
+		.antMatchers(
+				"/web/punter/**"
+				)
+		
+		.access("hasRole('ROLE_PUNTER')")
 		
 		.and().formLogin()
-		.loginPage("/logon/signin")
+		.loginPage("/web/anon/signin")
 		.usernameParameter("email")
 		.passwordParameter("password")
 		.successHandler(customAuthenticationSuccessHandler)
@@ -131,7 +136,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	public DaoAuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
 		authenticationProvider.setUserDetailsService(customUserDetailsService);
-//		authenticationProvider.setPasswordEncoder(passwordEncoder());
+		authenticationProvider.setPasswordEncoder(passwordEncoder());
 		return authenticationProvider;
 	}
 

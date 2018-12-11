@@ -12,7 +12,7 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName"
 			value="org.postgresql.Driver" />
-		<property name="url" value="jdbc:postgresql://127.0.0.1:5432/platez"/>
+		<property name="url" value="jdbc:postgresql://127.0.0.1:5432/shell"/>
 		<property name="username" value="pmk" />
 		<property name="password" value="pmk" />
 		<property name="initialSize" value="100" />
@@ -29,15 +29,11 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
 
-	<bean id="plateDao"
-		class="org.plate.domain.plate.persistence.PlateDaoImpl">
-		<property name="jdbcTemplate" ref="jdbcTemplate" />
-	</bean>
 
 	<bean id="home"
-		class="org.shell.home.persistence.HomeImpl"> 
+		class="org.shell.persistence.home.HomeImpl"> 
 		<property name="baseUserDao" ref="baseUserDao" />
-		<property name="plateDao" ref="plateDao" />
+
 	</bean>
 
 </beans>

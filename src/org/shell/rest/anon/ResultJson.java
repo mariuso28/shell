@@ -1,4 +1,4 @@
-package org.shell.rest;
+package org.shell.rest.anon;
 
 
 public class ResultJson {

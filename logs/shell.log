@@ -28,3 +28,76 @@
 11:45:02,238  WARN http-bio-8080-exec-3 PageNotFound:1139 - No mapping found for HTTP request with URI [/shell/web/anon/getSuccess] in DispatcherServlet with name 'shell'
 11:46:31,467  INFO localhost-startStop-2 XmlWebApplicationContext:960 - Closing WebApplicationContext for namespace 'shell-servlet': startup date [Tue Dec 11 11:44:46 MYT 2018]; parent: Root WebApplicationContext
 11:46:31,473  INFO localhost-startStop-2 XmlWebApplicationContext:960 - Closing Root WebApplicationContext: startup date [Tue Dec 11 11:44:46 MYT 2018]; root of context hierarchy
+13:07:37,359 ERROR main BaseUserDaoImpl:41 - Could not execute : PreparedStatementCallback; SQL [INSERT INTO baseuser (id,email,password,role,enabled) VALUES (?,?,?,?,?)]; ERROR: null value in column "contact" violates not-null constraint
+  Detail: Failing row contains (a813e1fe-72fd-46fd-a980-28213a9f4152, admin@test.com, null, null, $2a$10$txeiNPXMrhy9E/5WCEu2luwlB0prpjP4RrmJnrftdcXKbLBIXtvLe, t, ROLE_ADMIN).; nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "contact" violates not-null constraint
+  Detail: Failing row contains (a813e1fe-72fd-46fd-a980-28213a9f4152, admin@test.com, null, null, $2a$10$txeiNPXMrhy9E/5WCEu2luwlB0prpjP4RrmJnrftdcXKbLBIXtvLe, t, ROLE_ADMIN).
+org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [INSERT INTO baseuser (id,email,password,role,enabled) VALUES (?,?,?,?,?)]; ERROR: null value in column "contact" violates not-null constraint
+  Detail: Failing row contains (a813e1fe-72fd-46fd-a980-28213a9f4152, admin@test.com, null, null, $2a$10$txeiNPXMrhy9E/5WCEu2luwlB0prpjP4RrmJnrftdcXKbLBIXtvLe, t, ROLE_ADMIN).; nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "contact" violates not-null constraint
+  Detail: Failing row contains (a813e1fe-72fd-46fd-a980-28213a9f4152, admin@test.com, null, null, $2a$10$txeiNPXMrhy9E/5WCEu2luwlB0prpjP4RrmJnrftdcXKbLBIXtvLe, t, ROLE_ADMIN).
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:243)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:645)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:866)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927)
+	at org.shell.user.persistence.BaseUserDaoImpl.store(BaseUserDaoImpl.java:26)
+	at org.shell.user.initialize.CreateSampleUsers.main(CreateSampleUsers.java:48)
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "contact" violates not-null constraint
+  Detail: Failing row contains (a813e1fe-72fd-46fd-a980-28213a9f4152, admin@test.com, null, null, $2a$10$txeiNPXMrhy9E/5WCEu2luwlB0prpjP4RrmJnrftdcXKbLBIXtvLe, t, ROLE_ADMIN).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2003)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:200)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:424)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:161)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:133)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:873)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:866)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:629)
+	... 4 more
+13:07:37,363 ERROR main CreateSampleUsers:53 - Could not execute store : PreparedStatementCallback; SQL [INSERT INTO baseuser (id,email,password,role,enabled) VALUES (?,?,?,?,?)]; ERROR: null value in column "contact" violates not-null constraint
+  Detail: Failing row contains (a813e1fe-72fd-46fd-a980-28213a9f4152, admin@test.com, null, null, $2a$10$txeiNPXMrhy9E/5WCEu2luwlB0prpjP4RrmJnrftdcXKbLBIXtvLe, t, ROLE_ADMIN).; nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "contact" violates not-null constraint
+  Detail: Failing row contains (a813e1fe-72fd-46fd-a980-28213a9f4152, admin@test.com, null, null, $2a$10$txeiNPXMrhy9E/5WCEu2luwlB0prpjP4RrmJnrftdcXKbLBIXtvLe, t, ROLE_ADMIN).
+13:09:23,728  INFO main CreateSampleUsers:57 - Admin : BaseUser [id=420365fd-064e-4607-97e9-dfe05386d552, email=admin@test.com, enabled=true, role=ROLE_ADMIN]
+13:09:23,730  INFO main CreateSampleUsers:60 - Punter : BaseUser [id=420365fd-064e-4607-97e9-dfe05386d552, email=admin@test.com, enabled=true, role=ROLE_ADMIN]
+13:09:23,730  INFO main CreateSampleUsers:62 - Done
+14:00:32,689  INFO http-bio-8080-exec-3 RestAuthController:48 - Attempting to authorize : admin@test.com
+14:00:33,127  INFO http-bio-8080-exec-3 RestAuthController:56 - Got baseuser : admin@test.com
+14:03:11,535  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+14:03:11,544  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+14:03:11,545  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+14:03:15,256  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+14:03:15,262  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+14:03:15,263  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+14:04:12,665  INFO http-bio-8080-exec-8 RestAuthController:48 - Attempting to authorize : admin@test.com
+14:04:12,672  INFO http-bio-8080-exec-8 RestAuthController:56 - Got baseuser : admin@test.com
+14:04:18,285  INFO http-bio-8080-exec-9 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+14:04:18,290  INFO http-bio-8080-exec-9 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+14:04:18,293  INFO http-bio-8080-exec-9 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+14:04:19,410  INFO http-bio-8080-exec-9 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+14:04:19,415  INFO http-bio-8080-exec-9 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+14:04:19,416  INFO http-bio-8080-exec-9 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+14:15:05,305  INFO http-bio-8080-exec-4 RestAuthController:48 - Attempting to authorize : admin@test.com
+14:15:05,668  INFO http-bio-8080-exec-4 RestAuthController:56 - Got baseuser : admin@test.com
+14:15:05,853  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+14:15:05,855  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+14:15:05,856  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+14:50:43,549  INFO http-bio-8080-exec-6 WebAnonController:24 - Received logon
+14:51:53,402  INFO http-bio-8080-exec-10 WebAnonController:24 - Received logon
+14:53:59,959  INFO http-bio-8080-exec-4 WebAnonController:24 - Received logon
+14:55:51,134  INFO http-bio-8080-exec-10 WebAnonController:24 - Received logon
+14:56:06,852  INFO http-bio-8080-exec-1 WebAnonController:24 - Received logon
+14:56:50,995  INFO http-bio-8080-exec-10 WebAnonController:24 - Received logon
+14:57:42,709  INFO http-bio-8080-exec-3 WebAnonController:24 - Received logon
+14:58:50,406  INFO http-bio-8080-exec-1 WebAnonController:24 - Received logon
+14:59:53,985  INFO http-bio-8080-exec-5 WebAnonController:24 - Received logon
+15:00:48,551  INFO http-bio-8080-exec-5 WebAnonController:24 - Received logon
+15:02:15,266  INFO http-bio-8080-exec-3 WebAnonController:24 - Received logon
+15:03:59,909  INFO http-bio-8080-exec-7 WebAnonController:24 - Received logon
+15:05:26,930  INFO http-bio-8080-exec-2 WebAnonController:24 - Received logon
+15:16:12,518  INFO http-bio-8080-exec-4 RestAuthController:47 - Attempting to authorize : admin@test.com
+15:16:12,873  INFO http-bio-8080-exec-4 RestAuthController:55 - Got baseuser : admin@test.com
+15:16:13,042  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+15:16:13,043  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+15:16:13,044  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+15:16:20,846  INFO http-bio-8080-exec-8 WebAnonController:24 - Received logon
