@@ -92,7 +92,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		.antMatchers(
 				"/web/admin/**"
 				)
-		
 		.access("hasRole('ROLE_ADMIN')")
 		
 		.antMatchers(
@@ -102,7 +101,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		.access("hasRole('ROLE_PUNTER')")
 		
 		.and().formLogin()
-		.loginPage("/web/anon/signin")
+		.loginPage("/web/anon/logon")
 		.usernameParameter("email")
 		.passwordParameter("password")
 		.successHandler(customAuthenticationSuccessHandler)
@@ -115,16 +114,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	
 		.and().sessionManagement()
-		.invalidSessionUrl("/logon/signin")
+		.invalidSessionUrl("/web/anon/invalidSession")
 		.and().exceptionHandling()
-		.accessDeniedPage("/logon/access_denied")
+		.accessDeniedPage("/web/anon/accessDenied")
 		.and().csrf().disable()
 		;
 	}
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/logon/storeImage");
 	}
 
 	@Bean

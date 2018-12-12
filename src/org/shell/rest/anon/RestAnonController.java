@@ -1,6 +1,7 @@
 package org.shell.rest.anon;
 
 import org.apache.log4j.Logger;
+import org.shell.json.ResultJson;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -15,7 +15,7 @@
 function login() {
 
  	var email = document.getElementById('email');
-     	var password = document.getElementById('password');
+  var password = document.getElementById('password');
 
 	var jsonData = {};
 	  jsonData['username'] = email.value;
@@ -24,21 +24,28 @@ function login() {
 	$.ajax({
 
      type: "POST",
-        url : "/shell/api/a/authorize",
+        url : "/shell/api/a/authorize1",
         cache: false,
         contentType: 'application/json;',
         dataType: "json",
         data:JSON.stringify(jsonData),
          success: function(data) {
-            alert(JSON.stringify(data));
-	    if (data == '')
-            {
-       			
-               return;
-            }
-     	  var resultJson = $.parseJSON(JSON.stringify(data));
-          alert(resultJson.result);
-
+           var result = $.parseJSON(JSON.stringify(data));
+           if (result.status != 'OK')
+           {
+             alert(result.message);
+             return;
+           }
+           var authorized = result.result;
+           alert(authorized.body.access_token + " : " + authorized.role);
+           var access_token = authorized.body.access_token;
+           sessionStorage.setItem("access_token",access_token);
+           at = sessionStorage.getItem("access_token");
+           alert(at);
+           if (authorized.role=='ROLE_ADMIN')
+              window.location.replace("/shell/web/anon/goAdminHome");
+            else
+              window.location.replace("/shell/web/anon/goPunterHome");
         }
      });
  }
@@ -55,10 +62,10 @@ function login() {
   <h1>Shell Login</h1>
 
 </br>
-   email: <input type="text" id="email"/>
-   password: <input type="text" id="password"/>
-  
+   email: <input type="text" id="email" value="admin@test.com"/>
+   password: <input type="text" id="password"  value="88888888" />
+
   <input type="button" onClick="return login()" value="Logon" />
-  
+
 </body>
 </html>

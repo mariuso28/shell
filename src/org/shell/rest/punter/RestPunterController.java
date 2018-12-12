@@ -1,7 +1,7 @@
 package org.shell.rest.punter;
 
 import org.apache.log4j.Logger;
-import org.shell.rest.anon.ResultJson;
+import org.shell.json.ResultJson;
 import org.shell.services.Services;
 import org.shell.user.BaseUser;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -22,12 +22,11 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
 			.antMatchers(
 					"/api/punter/**"
 					)
-			.access("hasAnyRole('ROLE_PUNTER')")
+			.access("hasRole('ROLE_PUNTER')")
 			.antMatchers(
 					"/api/admin/**"
 					)
-			.access("hasAnyRole('ROLE_ADMIN')")
-		
+			.access("hasRole('ROLE_ADMIN')")
 		;
     }
 

@@ -101,3 +101,154 @@ Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "conta
 15:16:13,043  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
 15:16:13,044  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
 15:16:20,846  INFO http-bio-8080-exec-8 WebAnonController:24 - Received logon
+08:42:03,776  INFO http-bio-8080-exec-3 WebAnonController:24 - Received logon
+08:42:35,199  INFO http-bio-8080-exec-5 WebAnonController:24 - Received logon
+08:42:51,086  INFO http-bio-8080-exec-10 RestAuthController:54 - Attempting to authorize : admin@test.com
+08:42:51,406  INFO http-bio-8080-exec-10 RestAuthController:62 - Got baseuser : admin@test.com
+08:42:51,549  INFO http-bio-8080-exec-6 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+08:42:51,550  INFO http-bio-8080-exec-6 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+08:42:51,551  INFO http-bio-8080-exec-6 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+08:46:51,005  INFO http-bio-8080-exec-5 RestAuthController:54 - Attempting to authorize : admin@test.com
+08:46:51,007  INFO http-bio-8080-exec-5 RestAuthController:62 - Got baseuser : admin@test.com
+08:46:51,021  INFO http-bio-8080-exec-9 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+08:46:51,023  INFO http-bio-8080-exec-9 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+08:46:51,024  INFO http-bio-8080-exec-9 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+08:48:16,589  INFO http-bio-8080-exec-1 WebAnonController:24 - Received logon
+08:48:34,244  INFO http-bio-8080-exec-3 RestAuthController:54 - Attempting to authorize : admin@test.com
+08:48:34,248  INFO http-bio-8080-exec-3 RestAuthController:62 - Got baseuser : admin@test.com
+08:48:34,262  INFO http-bio-8080-exec-6 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+08:48:34,268  INFO http-bio-8080-exec-6 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+08:48:34,269  INFO http-bio-8080-exec-6 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+08:48:40,966  INFO http-bio-8080-exec-3 RestAuthController:54 - Attempting to authorize : admin@test.com
+08:48:40,967  INFO http-bio-8080-exec-3 RestAuthController:62 - Got baseuser : admin@test.com
+08:48:40,972  INFO http-bio-8080-exec-4 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+08:48:40,972  INFO http-bio-8080-exec-4 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+08:48:40,973  INFO http-bio-8080-exec-4 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+08:49:47,585  INFO http-bio-8080-exec-2 WebAnonController:24 - Received logon
+08:50:14,723  INFO http-bio-8080-exec-9 RestAuthController:54 - Attempting to authorize : admin@test.com
+08:50:15,114  INFO http-bio-8080-exec-9 RestAuthController:62 - Got baseuser : admin@test.com
+08:52:23,564  INFO http-bio-8080-exec-9 WebAnonController:24 - Received logon
+08:52:47,101  INFO http-bio-8080-exec-3 RestAuthController:54 - Attempting to authorize : admin@test.com
+08:52:47,474  INFO http-bio-8080-exec-3 RestAuthController:62 - Got baseuser : admin@test.com
+08:52:56,862  INFO http-bio-8080-exec-4 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+08:52:56,867  INFO http-bio-8080-exec-4 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+08:52:56,868  INFO http-bio-8080-exec-4 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:02:11,053  INFO http-bio-8080-exec-7 WebAnonController:24 - Received logon
+09:02:33,601  INFO http-bio-8080-exec-1 RestAuthController:54 - Attempting to authorize : admin@test.com
+09:02:33,606  INFO http-bio-8080-exec-1 RestAuthController:62 - Got baseuser : admin@test.com
+09:02:33,619  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:02:33,621  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:02:33,621  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:13:21,812  INFO http-bio-8080-exec-10 WebAnonController:24 - Received logon
+09:13:23,895  INFO http-bio-8080-exec-5 RestAuthController:58 - Attempting to authorize : 
+09:13:24,224 ERROR http-bio-8080-exec-5 RestAuthController:70 - Error finding User:  not found - null
+09:13:44,042  INFO http-bio-8080-exec-5 RestAuthController:58 - Attempting to authorize : admin@test.com
+09:13:44,052  INFO http-bio-8080-exec-5 RestAuthController:66 - Got baseuser : admin@test.com
+09:13:44,230  INFO http-bio-8080-exec-9 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:13:44,231  INFO http-bio-8080-exec-9 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:13:44,232  INFO http-bio-8080-exec-9 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:20:48,855  INFO http-bio-8080-exec-3 WebAnonController:24 - Received logon
+09:21:06,096  INFO http-bio-8080-exec-10 RestAuthController:69 - Attempting to authorize : admin@test.com
+09:21:06,424  INFO http-bio-8080-exec-10 RestAuthController:77 - Got baseuser : admin@test.com
+09:21:06,598  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:21:06,600  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:21:06,601  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:21:59,283  INFO http-bio-8080-exec-3 RestAuthController:69 - Attempting to authorize : admin@test.com
+09:21:59,284  INFO http-bio-8080-exec-3 RestAuthController:77 - Got baseuser : admin@test.com
+09:21:59,292  INFO http-bio-8080-exec-7 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:21:59,294  INFO http-bio-8080-exec-7 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:21:59,294  INFO http-bio-8080-exec-7 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:23:41,529  INFO http-bio-8080-exec-6 WebAnonController:24 - Received logon
+09:24:01,281  INFO http-bio-8080-exec-9 RestAuthController:69 - Attempting to authorize : admin@test.com
+09:24:01,282  INFO http-bio-8080-exec-9 RestAuthController:77 - Got baseuser : admin@test.com
+09:24:01,288  INFO http-bio-8080-exec-10 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:24:01,289  INFO http-bio-8080-exec-10 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:24:01,291  INFO http-bio-8080-exec-10 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:28:31,373  INFO http-bio-8080-exec-3 WebAnonController:24 - Received logon
+09:28:46,524  INFO http-bio-8080-exec-10 RestAuthController:69 - Attempting to authorize : admin@test.com
+09:28:46,856  INFO http-bio-8080-exec-10 RestAuthController:77 - Got baseuser : admin@test.com
+09:28:47,026  INFO http-bio-8080-exec-6 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:28:47,028  INFO http-bio-8080-exec-6 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:28:47,029  INFO http-bio-8080-exec-6 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:29:32,148  INFO http-bio-8080-exec-9 WebAnonController:24 - Received logon
+09:29:45,835  INFO http-bio-8080-exec-2 RestAuthController:69 - Attempting to authorize : admin@test.com
+09:29:45,839  INFO http-bio-8080-exec-2 RestAuthController:77 - Got baseuser : admin@test.com
+09:29:45,859  INFO http-bio-8080-exec-3 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:29:45,863  INFO http-bio-8080-exec-3 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:29:45,865  INFO http-bio-8080-exec-3 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:30:19,148  INFO http-bio-8080-exec-10 WebAnonController:24 - Received logon
+09:30:33,961  INFO http-bio-8080-exec-7 RestAuthController:69 - Attempting to authorize : admin@test.com
+09:30:33,964  INFO http-bio-8080-exec-7 RestAuthController:77 - Got baseuser : admin@test.com
+09:30:33,977  INFO http-bio-8080-exec-1 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:30:33,981  INFO http-bio-8080-exec-1 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:30:33,982  INFO http-bio-8080-exec-1 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:31:42,193  INFO http-bio-8080-exec-2 WebAnonController:24 - Received logon
+09:31:57,397  INFO http-bio-8080-exec-8 RestAuthController:72 - Attempting to authorize : admin@test.com
+09:31:57,754  INFO http-bio-8080-exec-8 RestAuthController:80 - Got baseuser : admin@test.com
+09:31:57,981  INFO http-bio-8080-exec-4 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:31:57,983  INFO http-bio-8080-exec-4 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:31:57,983  INFO http-bio-8080-exec-4 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:58:22,204  INFO http-bio-8080-exec-3 WebAnonController:24 - Received logon
+09:59:26,674  INFO http-bio-8080-exec-6 WebAnonController:24 - Received logon
+09:59:29,129  INFO http-bio-8080-exec-3 RestAuthController:76 - Attempting to authorize : admin@test.com
+09:59:29,446  INFO http-bio-8080-exec-3 RestAuthController:84 - Got baseuser : admin@test.com
+09:59:29,620  INFO http-bio-8080-exec-6 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:59:29,621  INFO http-bio-8080-exec-6 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:59:29,622  INFO http-bio-8080-exec-6 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+09:59:29,709  INFO http-bio-8080-exec-6 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+09:59:29,710  INFO http-bio-8080-exec-6 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+09:59:29,711  INFO http-bio-8080-exec-6 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:01:27,543  INFO http-bio-8080-exec-2 WebAnonController:24 - Received logon
+10:01:30,140  INFO http-bio-8080-exec-7 RestAuthController:75 - Attempting to authorize : admin@test.com
+10:01:30,481  INFO http-bio-8080-exec-7 RestAuthController:83 - Got baseuser : admin@test.com
+10:01:30,665  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:01:30,668  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:01:30,669  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:01:30,765  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:01:30,767  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:01:30,767  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:01:44,872  INFO http-bio-8080-exec-7 WebAnonController:24 - Received logon
+10:01:47,649  INFO http-bio-8080-exec-7 RestAuthController:75 - Attempting to authorize : admin@test.com
+10:01:47,650  INFO http-bio-8080-exec-7 RestAuthController:83 - Got baseuser : admin@test.com
+10:01:47,656  INFO http-bio-8080-exec-8 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:01:47,657  INFO http-bio-8080-exec-8 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:01:47,657  INFO http-bio-8080-exec-8 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:03:55,323  INFO http-bio-8080-exec-6 WebAnonController:24 - Received logon
+10:04:49,791  INFO http-bio-8080-exec-1 WebAnonController:24 - Received logon
+10:04:51,620  INFO http-bio-8080-exec-3 RestAuthController:75 - Attempting to authorize : admin@test.com
+10:04:51,624  INFO http-bio-8080-exec-3 RestAuthController:83 - Got baseuser : admin@test.com
+10:04:51,637  INFO http-bio-8080-exec-8 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:04:51,640  INFO http-bio-8080-exec-8 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:04:51,641  INFO http-bio-8080-exec-8 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:12:19,356  INFO http-bio-8080-exec-9 WebAnonController:24 - Received logon
+10:12:27,854  INFO http-bio-8080-exec-7 RestAuthController:75 - Attempting to authorize : admin@test.com
+10:12:27,856  INFO http-bio-8080-exec-7 RestAuthController:83 - Got baseuser : admin@test.com
+10:12:27,861  INFO http-bio-8080-exec-9 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:12:27,862  INFO http-bio-8080-exec-9 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:12:27,862  INFO http-bio-8080-exec-9 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:13:39,420  INFO http-bio-8080-exec-10 WebAnonController:24 - Received logon
+10:13:41,680  INFO http-bio-8080-exec-10 RestAuthController:75 - Attempting to authorize : admin@test.com
+10:13:41,683  INFO http-bio-8080-exec-10 RestAuthController:83 - Got baseuser : admin@test.com
+10:13:41,694  INFO http-bio-8080-exec-6 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:13:41,697  INFO http-bio-8080-exec-6 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:13:41,698  INFO http-bio-8080-exec-6 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:24:26,337  INFO http-bio-8080-exec-10 RestAuthController:75 - Attempting to authorize : admin@test.com
+10:24:26,684  INFO http-bio-8080-exec-10 RestAuthController:83 - Got baseuser : admin@test.com
+10:24:26,882  INFO http-bio-8080-exec-1 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:24:26,885  INFO http-bio-8080-exec-1 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:24:26,885  INFO http-bio-8080-exec-1 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:29:01,117  INFO http-bio-8080-exec-5 RestAuthController:75 - Attempting to authorize : admin@test.com
+10:29:01,118  INFO http-bio-8080-exec-5 RestAuthController:83 - Got baseuser : admin@test.com
+10:29:01,125  INFO http-bio-8080-exec-8 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:29:01,126  INFO http-bio-8080-exec-8 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:29:01,126  INFO http-bio-8080-exec-8 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+10:37:45,443  INFO http-bio-8080-exec-6 RestAuthController:75 - Attempting to authorize : admin@test.com
+10:37:45,754  INFO http-bio-8080-exec-6 RestAuthController:83 - Got baseuser : admin@test.com
+10:37:45,948  INFO http-bio-8080-exec-7 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+10:37:45,950  INFO http-bio-8080-exec-7 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+10:37:45,950  INFO http-bio-8080-exec-7 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]
+11:09:44,724  INFO http-bio-8080-exec-4 RestAuthController:75 - Attempting to authorize : admin@test.com
+11:09:45,039  INFO http-bio-8080-exec-4 RestAuthController:83 - Got baseuser : admin@test.com
+11:09:45,198  INFO http-bio-8080-exec-5 CustomUserDetailsService:28 - loadUserByUsername email : admin@test.com
+11:09:45,200  INFO http-bio-8080-exec-5 CustomUserDetailsService:43 - User : admin@test.com found with role :ROLE_ADMIN
+11:09:45,200  INFO http-bio-8080-exec-5 CustomUserDetailsService:49 - Using User : admin@test.com with authorities :[ROLE_ADMIN]

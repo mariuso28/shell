@@ -23,7 +23,7 @@ public class CustomAuthenticationFailureHandler extends SimpleUrlAuthenticationF
 		setUseForward(false);
 		
 		try {
-			log.info("Forwarding to : " + "/web/anon//signin?error&message==Authentication%20Error");
+			log.info("Forwarding to : " + "/web/anon/logon?error&message==Authentication%20Error");
 			super.onAuthenticationFailure(request, response, exception);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

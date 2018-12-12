@@ -1,10 +1,11 @@
+package org.shell.json;
 
-public class Credentials {
+public class CredentialsJson {
 
 	private String username;
 	private String password;
 	
-	public Credentials()
+	public CredentialsJson()
 	{
 	}
 

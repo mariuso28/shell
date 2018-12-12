@@ -41,7 +41,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer
         	.allowFormAuthenticationForClients()
-	        .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/logon/signin"))
+	        .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/web/anon/logon"))
 	        .tokenKeyAccess("permitAll()")
 	        .checkTokenAccess("isAuthenticated()")
         ;
